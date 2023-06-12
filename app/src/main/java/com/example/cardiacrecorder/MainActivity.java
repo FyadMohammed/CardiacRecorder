@@ -55,4 +55,8 @@ public class MainActivity extends AppCompatActivity {
         Intent register_page = new Intent(MainActivity.this,registerActivity.class);
         startActivity(register_page);
     }
+
+    public void function(){
+        String s = "Hello World";
+    }
 }
