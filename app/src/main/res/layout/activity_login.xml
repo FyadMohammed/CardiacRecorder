@@ -26,23 +26,24 @@
         />
 
     <EditText
+        android:id="@+id/login_email"
         android:layout_width="350dp"
         android:layout_height="45dp"
-        android:hint="Email"
         android:layout_marginTop="30dp"
+        android:hint="Email"
         android:paddingLeft="20dp"
         android:textColor="#54626F"
         android:textStyle="bold" />
 
     <EditText
+        android:id="@+id/login_password"
         android:layout_width="350dp"
         android:layout_height="45dp"
-        android:hint="Password"
-        android:textColor="#54626F"
-        android:textStyle="bold"
         android:layout_marginTop="30dp"
+        android:hint="Password"
         android:paddingLeft="20dp"
-        />
+        android:textColor="#54626F"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/forget_link"

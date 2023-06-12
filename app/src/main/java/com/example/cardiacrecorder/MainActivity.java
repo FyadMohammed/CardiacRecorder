@@ -7,12 +7,27 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class MainActivity extends AppCompatActivity {
+
+    FirebaseUser user;
+    FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        auth = FirebaseAuth.getInstance();
+        user = auth.getCurrentUser();
+
+        if(user!=null){
+            Intent dashpage = new Intent(MainActivity.this, dashboardActivity.class);
+            startActivity(dashpage);
+            finish();
+        }
 
         Button login_btn = findViewById(R.id.login_btn2);
         Button register_btn = findViewById(R.id.register_btn2);
